@@ -27,3 +27,7 @@ document.addEventListener("keydown", increaseCount);
 titleElement.addEventListener("click", increaseCount);
 
 setInterval(increaseCount, 1000);
+
+function changeColor(color) {
+  document.documentElement.style.setProperty("--section-color", color);
+}

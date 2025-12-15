@@ -32,8 +32,14 @@ section:nth-child(2n) {
   fill: red;
 }
 
-.svg-green circle {
-  stroke: green;
+.svg-blue circle {
+  stroke: blue;
+  stroke-width: 2;
+  fill: none;
+}
+
+svg-gray circle {
+  stroke: gray
   stroke-width: 2;
   fill: none;
 }
