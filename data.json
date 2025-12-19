@@ -1,0 +1,9 @@
+[
+  {
+    "id": "Zitate2",
+    "titel": "Weitere Zitate",
+    "text": ["Zitat1, Zitat2"]
+  }
+]
+
+// Speicher Inhalte getrennt von HTML. Werden mit Javascript geladen
