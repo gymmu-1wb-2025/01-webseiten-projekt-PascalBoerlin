@@ -4,38 +4,241 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eigene Webseite</title>
+    <title>Wer ist Elon Musk?</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="./main.js" defer></script>
   </head>
 
-  <body>
-    <header>
-      <h1>Webseite von ...</h1>
+  <!--Bild und Titel, header Bereich-->
+  <body class="grid-wrapper">
+    <header
+      class="img-stack"
+      style="grid-area: header; position:relative; width: 100%;"
+    >
+      <div
+        class="content"
+        style="
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        transform: none;
+        text-align: left;
+        "
+      >
+        <h1 id="Start">Webseite über Elon Musk von Pascal Börlin Start</h1>
+      </div>
+      <img
+        src="https://tse2.mm.bing.net/th/id/OIP.48y1-rqJaUwEvtrOQmk6NAAAAA?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+        alt="Bild vom Elon Musk"
+        width="100%"
+      >
     </header>
-
-    <main>
-      <section>
-        <h2>Dies ist ein erster Abschnitt</h2>
-        Abschnitte haben immer einen Titel und dann den Text.
+    <!--Teil auf der Seite, Farben anpassen-->
+    <aside>
+      <section id="colors">
+        <h2>Farben anpassen</h2>
+        <p>Wählen Sie eine dieser Farben als Basis für die Webseite.</p>
+        <ul class="color-list">
+          <li class="svg-red" onclick="changeColor('red')">
+            <svg viewBox="0 0 10 10" width="1.5em">
+              <circle cx="5" cy="5" r="5"/>
+            </svg>
+            <span>Rot</span>
+          </li>
+          <li class="svg-blue" onclick="changeColor('blue')">
+            <svg viewBox="0 0 10 10" width="1.5em">
+              <circle cx="5" cy="5" r="5"/>
+            </svg>
+            <span>Blau</span>
+          </li>
+        </ul>
       </section>
 
+      <!--Navigation auf der eigenen Seite und Icons-->
       <section>
-        <h2>Das p-Tag</h2>
-        <p>Der Text sollte immer in ein p gepackt werden.</p>
-        <p>Mit dem p ist es auch möglich einen Zeilenumbruch zu haben.</p>
+        <ul>
+          <li>
+            <a href="#Start">Start </a>
+          </li>
+          <svg viewBox="0 0 200 200">
+            <rect x="10" y="10" width="10" height="4" rx="4" fill="black"/>
+            <circle cx="12" cy="15" r="1" fill="black"/>
+            <circle cx="18" cy="15" r="1" fill="black"/>
+          </svg>
+          <li>
+            <a href="#colors">Farben </a>
+          </li>
+          <svg viewBox="0 0 40 40">
+            <rect x="18" y="25" width="4" height="3" fill="black"/>
+            <polygon points="18,25 22, 25 20,22" fill="black"/>
+          </svg>
+
+          <li>
+            <a href="#Zitate">Zitate </a>
+          </li>
+          <svg viewBox="0 0 200 200">
+            <rect x="10" y="10" width="10" height="4" rx="4" fill="black"/>
+            <circle cx="12" cy="15" r="1" fill="black"/>
+            <circle cx="18" cy="15" r="1" fill="black"/>
+          </svg>
+          <li>
+            <a href="#Unterseiten">Unterseiten </a>
+          </li>
+          <svg viewBox="0 0 40 40">
+            <rect x="18" y="25" width="4" height="3" fill="black"/>
+            <polygon points="18,25 22, 25 20,22" fill="black"/>
+          </svg>
+          <li>
+            <a href="#elon"> Wer ist Elon? </a>
+          </li>
+          <svg viewBox="0 0 200 200">
+            <rect x="10" y="10" width="10" height="4" rx="4" fill="black"/>
+            <circle cx="12" cy="15" r="1" fill="black"/>
+            <circle cx="18" cy="15" r="1" fill="black"/>
+          </svg>
+          <li>
+            <a href="#Leben">Leben</a>
+          </li>
+          <svg viewBox="0 0 40 40">
+            <rect x="18" y="25" width="4" height="3" fill="black"/>
+            <polygon points="18,25 22, 25 20,22" fill="black"/>
+          </svg>
+          <li>
+            <a href="#Fragen">Fragen</a>
+          </li>
+          <svg viewBox="0 0 200 200">
+            <rect x="10" y="10" width="10" height="4" rx="4" fill="black"/>
+            <circle cx="12" cy="15" r="1" fill="black"/>
+            <circle cx="18" cy="15" r="1" fill="black"/>
+          </svg>
+          <li>
+            <a href="#Quellen"> Quellen </a>
+          </li>
+          <svg viewBox="0 0 40 40">
+            <rect x="18" y="25" width="4" height="3" fill="black"/>
+            <polygon points="18,25 22, 25 20,22" fill="black"/>
+          </svg>
+        </ul>
+      </section>
+    </aside>
+
+    <!--Text über Elon Musk-->
+    <main style="grid-area: main">
+      <section id="elon">
+        Elon Musk ist ein südafrikanischer-kanadisch-US-amerikanischer
+        Unternehmer und Milliardär. Er wurde in Pretoria, der Hauptstadt von
+        Südafrika, geboren. Dies geschah 1971. Er hat einen Bruder und eine
+        Schwester. Elon Musk ist bekannt als Unternehmer und Innvoator in der
+        Technologie. Wichtige Firmen von ihm sind Tesla und SpaceX
       </section>
 
-      <section>
-        <h2>Unterseiten verlinken</h2>
+      <!--Zitate von Elon Musk, Text-->
+      <section id="Zitate">
+        <h2>Drei Zitate von Elon Musk (erklärt)</h2>
+        <p>"Ich würde gerne auf dem Mars sterben. Aber nicht beim Aufprall"</p>
         <p>
-          Wir können auch weitere Webseiten verknüpfen, dafür müssen wir nur
-          einen Link angeben, wie zum Beispiel zu den
-          <a href="./unterseiten/hobbies.html">Hobbies</a>.
+          "Manche Leute mögen keine Veränderungen, aber man muss sie annehmen,
+          wenn die Alternative eine Katastrophe ist."
+        </p>
+        <p>
+          "Jedes Produkt, dass eine Bedienungsanleitung braucht, um zu
+          funktionieren, ist kaputt."
+        </p>
+        <p>
+          Elon Musk geht es um die Menschheit und nicht um einzelne Personen. Er
+          erwartet, dass man selber auf die Lösung kommt, sodass das eigene
+          Denken gefördert werden kann. Sein Traum ist der Mars. Wenn er könnte
+          würde er, mit grosser Wahrscheinlichkeit, auf dem Mars leben.
+        </p>
+      </section>
+
+      <!--Für data.json-->
+      <section id="Zitate2"></section>
+
+      <!--Navigation, für die Unterseiten. Man kann auf andere Seiten und Icons-->
+      <section id="Unterseiten">
+        <h2>Themen über Elon Musk </h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="./unterseiten/Merkmale.html">Merkmale</a>
+            </li>
+            <svg viewBox="10  10 200 200">
+              <rect x="10" y="10" width="10" height="4" rx="4" fill="black"/>
+              <circle cx="12" cy="15" r="1" fill="black"/>
+              <circle cx="18" cy="15" r="1" fill="black"/>
+            </svg>
+            <li>
+              <a href="./unterseiten/Charakter.html">Charakter</a>.
+            </li>
+            <svg viewBox="0 0 40 40">
+              <rect x="18" y="25" width="4" height="3" fill="black"/>
+              <polygon points="18,25 22, 25 20,22" fill="black"/>
+            </svg>
+            <li>
+              <a href="./unterseiten/Freunde-und-Familie.html"
+                >Freunde und Familie</a
+              >
+              <svg viewBox="0 0 200 200">
+                <rect x="10" y="10" width="10" height="4" rx="4" fill="black"/>
+                <circle cx="12" cy="15" r="1" fill="black"/>
+                <circle cx="18" cy="15" r="1" fill="black"/>
+              </svg>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section id="Leben">
+        <h2>Elon Musks Leben</h2>
+        <p>
+          Bei Fragen bezüglich meiner Website können sie mich unter
+          pascal.boerlin@gmail.com erreichen oder mit Teams
+        </p>
+      </section>
+
+      <!--Abschnitt Fragen-->
+      <section id="Fragen">
+        <h2>Fragen?</h2>
+        <p>
+          Bei Fragen bezüglich meiner Website können sie mich unter
+          pascal.boerlin@gmail.com erreichen oder mit Teams
+        </p>
+      </section>
+
+      <!--Quellen eingefügt mit href (auf andere Website)-->
+      <section id="Quellen">
+        <h2>Quellen, die ich benutzte</h2>
+        <p>
+          <a
+            href="https://www.businessinsider.de/wirtschaft/fuenf-charakterzuege-die-elon-musk-als-unternehmer-so-erfolgreich-machen-a/"
+            >5 Charakterzüge, die Elon Musk so erfolgreich machen - Business
+            Insider</a
+          >
+        </p>
+        <p>
+          <a href="(https://de.wikipedia.org/wiki/Elon_Musk) "
+            >[Elon Musk Wikipedia]
+          </a>
+        </p>
+        <p>
+          <a href="Wikipedia](https://de.wikipedia.org/wiki/Musk_\(Familie\))"
+            >Musk Familie</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://www.gq-magazin.de/entertainment/artikel/elon-musk-15-saetze-die-ihn-beruehmt-gemacht-haben"
+          >
+            Zitate!</a
+          >
         </p>
       </section>
     </main>
+    <!--Ende main-->
 
-    <footer>Meine Webseite</footer>
+    <!--Neuer Abschnitt am Fuss. Mit anderer Anordnung-->
+    <footer style="grid-area: footer">Elon Musk, das Genie.</footer>
   </body>
 </html>

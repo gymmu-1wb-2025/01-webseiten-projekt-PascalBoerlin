@@ -1,0 +1,71 @@
+/* Definition der Farben. --section-color wird benutzt für die Hintergrundfarbe der Sections*/
+:root {
+  --section-color: white;
+}
+
+/* Grid-Layout, 2 Spalten und 3 Zeilen */
+.grid-wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+/* Header, Sachen im Zentrum, nebeneinander*/
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Standard Hintergrundfarbe für alle Sections */
+section {
+  background-color: var(--section-color);
+}
+
+/* Jede zweite Section bekommt einen dunkleren Farbton */
+section:nth-child(2n) {
+  background-color: hsl(from var(--section-color) h s calc(l - 20));
+}
+
+/* Roter Kreis */
+.svg-red circle {
+  fill: red;
+}
+
+/* Blauer Kreis */
+.svg-blue circle {
+  stroke: blue;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Design für kleine Bildschirme */
+@media (max-width: 768px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+  }
+}
+
+/* Design für grössere Bildschirme */
+@media (min-width: 769px) {
+  .grid-wrapper {
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "aside main"
+      "footer footer";
+  }
+}
