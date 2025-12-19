@@ -38,8 +38,25 @@ section:nth-child(2n) {
   fill: none;
 }
 
-svg-gray circle {
-  stroke: gray
-  stroke-width: 2;
-  fill: none;
+@media (max-width: 768px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+  }
+}
+
+@media (min-width: 769px) {
+  .grid-wrapper {
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "aside main"
+      "footer footer";
+  }
 }
